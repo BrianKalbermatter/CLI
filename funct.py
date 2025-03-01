@@ -151,18 +151,18 @@ class Unpacking:
         nor_result = not (a or b)
         print(nor_result)
 
-    def operator_Tenario():
+    def operator_Tenario(self):
         #Operador Tenario
         x = 10
         print("Es 10" if x == 10 else "No es 10")#Tenary Operator
 
-    def operator_Tenario_Dos():
+    def operator_Tenario_Dos(self):
         a = 11
         b = 12
         c = a/b if b !=0 else 0
         print(c)
 
-    def numero_Par_Impar():
+    def numero_Par_Impar(self):
         #Verifica si un numero es par o impar
         x = 6
         if x % 2 == 0:
@@ -170,7 +170,7 @@ class Unpacking:
         else:
             print("Es impar")
 
-    def condicion_De_Decremento():
+    def condicion_De_Decremento(self):
         #Decrementa x en 1 unidad  si es mayor a 0
         x=5
         x -= 1 if x > 0 else x
@@ -191,7 +191,7 @@ class BucleFor:
             print(i)
 
     #Iterables
-    def funct_Iterable():
+    def funct_Iterable(self):
         list = [1, 2, 3, 4, 5]
         cadena = "Python"
         numero = 12
@@ -201,7 +201,7 @@ class BucleFor:
 
 #Iteradores
 #Un iterador es un objeto que permite recorrer un contenedor, pero no se puede acceder a los elementos directamente
-    def funct_Iterador():
+    def funct_Iterador(self):
         list = [1, 2, 3, 4, 5]
         #Esta lista ocupa un espacio en memoria
         iterador = iter(list)
@@ -215,14 +215,14 @@ class BucleFor:
 # dict_keyiterator / para diccionario
 
 class Iterador:
-    def funct_Iterador_List():
+    def funct_Iterador_List(self):
         lista = [2, 3]
         it = iter(lista)
         print(next(it))
         print(next(it))
         #print(next(it)) esto daria un error porque no hay 3 numeros en la lista. Solamente 2.
 
-    def funct_Iterador_MultiplesListas():
+    def funct_Iterador_MultiplesListas(self):
         lista1 = [2,3,4]
         it1 = iter(lista1)
         it2 = iter(lista1)
@@ -231,7 +231,7 @@ class Iterador:
         print(next(it1))
         print(next(it2))
 
-    def for_Anidados():
+    def for_Anidados(self):
         lista3 = [[56, 34, 1], 
                 [12, 4, 5], 
                 [9, 4, 3]]
@@ -243,19 +243,19 @@ class Iterador:
                 print(j)
     
     #Iterando cadenas de [::-1] desde el ultimo al primer elemento
-    def bucle_For_Regresive_One():
+    def bucle_For_Regresive_One(self):
         texto = "Python1"
         for var in texto[::-1]:
             print(var)
     #Iterando cadenas de [::-2] pero ahora sacando letras
-    def bucle_For_Recort_Two():
+    def bucle_For_Recort_Two(self):
         texto = "Python2"
         for i in texto[::-2]:
             print(i)
 
     #Comprehensions lists
     #print(sum(i for i in range(10)))
-    def usingRange():
+    def usingRange(self):
         for i in range(10):
             print(i) 
     
@@ -263,7 +263,7 @@ class Iterador:
     print(list(range(5, 20 ,2)))
 
     #Mezclandolo con el range
-    def mixing_Without_Range():
+    def mixing_Without_Range(self):
         for i in range(5, 20 ,2):
             print(i)
         #Secuencia inversa
@@ -271,14 +271,23 @@ class Iterador:
             print(j)
     
 class Mientras:
-    def iteracion_While():
-        x = 10
-        while x > 0:
-            x -= 1
+    def iteracion_While(self):
+        a = 10
+        while a > 0:
+            a -= 1
+            print(a)
+    
+    def iteracion_While_One(self):
+        b = 10
+        while b > 0: b -= 1; print(b)
+    
+    def iteracion_While_Two(self):
+        x = ["Uno", "Dos", "Tres"]
+        while x:
+            x.pop(0)
             print(x)
 
-        x = 10
-        while x > 0: x -= 1; print(x)
+
 
 
 

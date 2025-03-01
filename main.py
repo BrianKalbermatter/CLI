@@ -4,8 +4,8 @@ from funct import *
 escojaunnumero = EscojaUnNumero()
 
 #Acceder a la variable directamente
-escojaunnumero.funct1(EscojaUnNumero.menssage)
-escojaunnumero.funct3()
+#escojaunnumero.funct1(EscojaUnNumero.menssage)
+#escojaunnumero.funct3()
 
 #TypingDuck
 typingduck = TypingDuck()
@@ -41,7 +41,6 @@ unpacking.condicion_De_Decremento()
 buclefor = BucleFor()
 buclefor.bucle_For()
 buclefor.bucle_For_Dos()
-buclefor.funct_Iterable()
 buclefor.funct_Iterador()
 
 #Class Iteradores
@@ -51,6 +50,10 @@ iterador.funct_Iterador_MultiplesListas()
 iterador.for_Anidados()
 
 #Iterador string [::-1]
+object = Mientras()
+object.iteracion_While()
+object.iteracion_While_One()
+object.iteracion_While_Two()
 
 
 
