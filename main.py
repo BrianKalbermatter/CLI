@@ -4,11 +4,8 @@ from funct import *
 escojaunnumero = EscojaUnNumero()
 
 #Acceder a la variable directamente
-
 escojaunnumero.funct1(EscojaUnNumero.menssage)
 escojaunnumero.funct3()
-
-
 
 #TypingDuck
 typingduck = TypingDuck()
@@ -33,8 +30,27 @@ unpacking.unpacking_Dos()
 unpacking.dictionary_Unpacking()
 unpacking.unpacking_Warning()
 unpacking.bucle_For_Unpacking()
-unpacking.unpacking_For_Swapping
+unpacking.unpacking_For_Swapping()
+unpacking.operadores_Logicos()
+unpacking.operator_Tenario()
+unpacking.operator_Tenario_Dos()
+unpacking.numero_Par_Impar()
+unpacking.condicion_De_Decremento()
 
+#Class Bucle For
+buclefor = BucleFor()
+buclefor.bucle_For()
+buclefor.bucle_For_Dos()
+buclefor.funct_Iterable()
+buclefor.funct_Iterador()
+
+#Class Iteradores
+iterador = Iterador()
+iterador.funct_Iterador_List()
+iterador.funct_Iterador_MultiplesListas()
+iterador.for_Anidados()
+
+#Iterador string [::-1]
 
 
 

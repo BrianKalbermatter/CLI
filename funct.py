@@ -242,9 +242,43 @@ class Iterador:
             for j in i:
                 print(j)
     
-#Iterando cadenas de [::-1] desde el ultimo al primer elemento
+    #Iterando cadenas de [::-1] desde el ultimo al primer elemento
+    def bucle_For_Regresive_One():
+        texto = "Python1"
+        for var in texto[::-1]:
+            print(var)
+    #Iterando cadenas de [::-2] pero ahora sacando letras
+    def bucle_For_Recort_Two():
+        texto = "Python2"
+        for i in texto[::-2]:
+            print(i)
 
+    #Comprehensions lists
+    #print(sum(i for i in range(10)))
+    def usingRange():
+        for i in range(10):
+            print(i) 
+    
+    #range() - Funcion
+    print(list(range(5, 20 ,2)))
 
+    #Mezclandolo con el range
+    def mixing_Without_Range():
+        for i in range(5, 20 ,2):
+            print(i)
+        #Secuencia inversa
+        for j in range(5, 0, -1):
+            print(j)
+    
+class Mientras:
+    def iteracion_While():
+        x = 10
+        while x > 0:
+            x -= 1
+            print(x)
+
+        x = 10
+        while x > 0: x -= 1; print(x)
 
 
 
