@@ -287,9 +287,73 @@ class Mientras:
             x.pop(0)
             print(x)
 
+    def iterator_Else_While(self):
+        x = 5
+        while x > 0:
+            x -= 1
+            print(x)
+            #break (Si hay un break aca el else no se cumple)
+        else:
+            print("El bucle a finalizado")
+    
+    def iterador_Else_While_Three(self):
+        i, j, k = 0, 0, 0
+        while i < 3:
+            while j < 3:
+                while k < 3:
+                    print(i,j,k)
+                    k += 1
+                    j += 1
+                k = 0
+            i += 1
+            j = 0
+    
+    def graphic_Tree_Chrisma(self):
+        z = 7
+        x = 1
+        while z > 0:
+            print(' ' * z + 'x' * x + ' ' * z)
+            x+=2
+            z-=1
+    
+    def text_Tree_List(self):
+        text = "Python"
+        i = 0
+        while i < len(text):
+            print(text[:i + 1])
+            i += 1
+    
+    def fibonacci(self):
+        a, b = 0, 1
+        while b < 25:
+            print(b)
+            a, b = b, a + b
 
-
-
+class SwitchInPython:
+    #Lookup Tables
+    def switchPython(self, condicion):
+        #condicion = int(input("Coloque su condicion:\n->"))
+        if condicion == 1:
+            print("Haz a")
+        elif condicion == 2:
+            print("Haz b")
+        elif condicion == 3:
+            print("Haz c")
+        else:
+            print("Haz d")
+    
+    def switchPythonCalculator(self):
+        def calculator(self, operator, a, b):
+            if operator == 'sumar':
+                return a + b
+            elif operator == 'restar':
+                return a - b
+            elif operator == 'multiplicar':
+                return a * b
+            else:
+                operator == 'dividir'
+                return a / b
+        print(calculator)
 
 
 

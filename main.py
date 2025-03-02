@@ -49,14 +49,21 @@ iterador.funct_Iterador_List()
 iterador.funct_Iterador_MultiplesListas()
 iterador.for_Anidados()
 
-#Iterador string [::-1]
+#Iterador (string) 
 object = Mientras()
 object.iteracion_While()
 object.iteracion_While_One()
 object.iteracion_While_Two()
+object.iterator_Else_While()
+object.iterador_Else_While_Three()
+object.graphic_Tree_Chrisma()
+object.fibonacci()
 
+#En Python no hay un switch en si
+#Switch en Python
+switchObject = SwitchInPython()
+switchObject.switchPython(condicion=2)
 
-
-
-
+#Calculator Simulator Switch
+switchObject.switchPythonCalculator()
 
