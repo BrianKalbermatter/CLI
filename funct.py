@@ -1,5 +1,5 @@
 from math import sqrt
-
+import time
 
 
 
@@ -330,6 +330,7 @@ class Mientras:
             a, b = b, a + b
 
 class SwitchInPython:
+    #Emulando Switch
     #Lookup Tables
     def switchPython(self, condicion):
         #condicion = int(input("Coloque su condicion:\n->"))
@@ -342,7 +343,7 @@ class SwitchInPython:
         else:
             print("Haz d")
     
-    def switchPythonCalculator(self):
+    def switchPythonCalculator1(self):
         def calculator(self, operator, a, b):
             if operator == 'sumar':
                 return a + b
@@ -354,6 +355,94 @@ class SwitchInPython:
                 operator == 'dividir'
                 return a / b
         print(calculator)
+
+    #Este esta almacenado en un diccionario
+    def switchPythonCalculator2(self):
+        def calculator(self, operator, a, b):
+            return{
+                'sumar' : lambda: a + b,
+                'restar ' : lambda: a - b,
+                'multiplicar' : lambda: a * b,
+                'dividir' : lambda: a / b
+            }.get(operator, lambda: None)
+        print(calculator)
+    
+    class LearnLambda:
+    #Se puede evitar escribir def con lambda. 
+    #Se usa con varias funciones. 
+        doblar = lambda x: x * 2
+        print(doblar(4))
+        #Lo que hace en esa funcion es multiplicar el numero de doblar * 2 = 8 y lo que se devuelve aca es la funcion lambda
+class Switch1:
+    tabla_switch = {
+        "0" : "000",
+        "1" : "001",
+        }
+    def usa_switch(self, decimal, tabla_switch):
+        return tabla_switch.get(decimal, "NA")
+    
+    def usa_if(decimal):
+        if decimal == '0':
+            return "000"
+        elif decimal == '1':
+            return "001"
+        elif decimal == '2':
+            return "010"
+        elif decimal == '3':
+            return "011"
+        elif decimal == '4':
+            return "100"
+        elif decimal == '5':
+            return "101"
+        elif decimal == '6':
+            return "110"
+        elif decimal == '7':
+            return "111"
+        else:
+            return "NA"
+    
+    #A continuacion mediremos el "tiempo de ejecucion" de ambas para saber cual es mas rapida. Vamos a crear primero un "decorador" que nos permita medir el tiempo que una funcion tarda en ejecutarse.
+    def mide_tiempo(function):
+        def funtion_medida(*args, **kwargs):
+            inicio = time.time()
+            c = function(*args, **kwargs)
+            print(f"Entrada: {args[1]}. Tiempo: {time.time() - inicio}")
+            return c
+        return funtion_medida
+    
+    #Decoradores
+    @mide_tiempo
+    
+    #Funcion para que se repita 1000000000 veces
+    def repite_funtion(function, entrada):
+        return [function(entrada) for i in range(10000000)]
+    
+    #No solamente pueden ser llamadas como print o como tal la funcion tambien puedo llamarla con for asi:
+    for i in range(8):
+        repite_funtion(usa_if, str(i))
+
+    for i in range(8):
+        repite_funtion(usa_switch, str(i))
+
+
+#Match de casos
+class ClassMatch:
+    def funct_Match():
+        hora = int(input("La hora que es: es "))
+        match hora:
+            case 8: 
+                for i in range(3):
+                    return i
+            case 14:
+                print("Desayunar")
+            case 21:
+                print("Almorzar")
+            case 34:
+                print("Cenar")
+            case _:
+                print("No Toca Comer")
+
+
 
     
 

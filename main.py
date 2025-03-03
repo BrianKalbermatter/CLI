@@ -50,14 +50,14 @@ iterador.funct_Iterador_MultiplesListas()
 iterador.for_Anidados()
 
 #Iterador (string) 
-object = Mientras()
-object.iteracion_While()
-object.iteracion_While_One()
-object.iteracion_While_Two()
-object.iterator_Else_While()
-object.iterador_Else_While_Three()
-object.graphic_Tree_Chrisma()
-object.fibonacci()
+object_mientras = Mientras()
+object_mientras.iteracion_While()
+object_mientras.iteracion_While_One()
+object_mientras.iteracion_While_Two()
+object_mientras.iterator_Else_While()
+object_mientras.iterador_Else_While_Three()
+object_mientras.graphic_Tree_Chrisma()
+object_mientras.fibonacci()
 
 #En Python no hay un switch en si
 #Switch en Python
@@ -65,5 +65,18 @@ switchObject = SwitchInPython()
 switchObject.switchPython(condicion=2)
 
 #Calculator Simulator Switch
-switchObject.switchPythonCalculator()
+switchObject.switchPythonCalculator1()
+switchObject.switchPythonCalculator2()
+
+#Aprendiendo a usar Switch
+switchObjectTwo = Switch1()
+switchObjectTwo.usa_switch(0,1)
+
+
+
+
+
+
+
+
 
