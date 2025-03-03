@@ -373,6 +373,34 @@ class SwitchInPython:
         doblar = lambda x: x * 2
         print(doblar(4))
         #Lo que hace en esa funcion es multiplicar el numero de doblar * 2 = 8 y lo que se devuelve aca es la funcion lambda
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Switch1:
     tabla_switch = {
         "0" : "000",
@@ -425,6 +453,22 @@ class Switch1:
         repite_funtion(usa_switch, str(i))
 
 
+
+
+
+
+
+
+
+###################################################################
+
+
+
+
+
+
+
+
 #Match de casos
 class ClassMatch:
     def funct_Match():
@@ -442,12 +486,81 @@ class ClassMatch:
             case _:
                 print("No Toca Comer")
 
+#Uso del Break
+class ClassBreak:
+    x = 5
+    while x > 0:
+        x -= 1
+        if x == 3:
+            break
+        print(x)
+
+################################################
+
+#Uso del Continue
+class ClassContinue:
+    x = 5
+    while x > 0:
+        x -= 1 
+        if x == 3:
+            continue
+        print(x)
 
 
+#Recorrer i-th de elementos
+#i-esimo - Utilizando el len()
+class IEsimo():
+    lista_frutas = ["limones", "manzanas", "naranjas", "kiwis"]
+    for i in range(len(lista_frutas)):
+        print(f"El {i}-esimo{lista_frutas[i]}")
+    tupla_frutas = ("limones", "manzanas", "naranjas", "kiwis")
+
+#Uso de la funcion zip()
+class ClassZip:
+    def bucleForUnaLista():
+        a = [1, 2]
+        b = ["Uno", "Dos"]
+        c = zip(a, b)
+        print(list(c))
+
+    def bucleForIterandoDosListas():
+        a = [1, 2]
+        b = ["Uno", "Dos"]
+        c = zip(a, b)
+
+        for numero, texto in zip(a, b):
+            print("Numero", numero, "Letra", texto)
     
+    def bucleForZipCon_N_Argumentos():
+        numeros = [1, 2]
+        espanol = ["Uno", "Dos"]
+        ingles = ["One", "Two"]
+        frances = ["Un", "Deux"]
+        c = zip(numeros, espanol, ingles, frances)
+        for n, e, i, f in zip(numeros, espanol, ingles, frances):
+            print(n, e,i,f)
+
+    def bucleForZip_Diferentes_Longitudes():
+        numeros = [1, 2, 3, 4, 5]
+        espanol = ["Uno", "Dos"]
+
+        for n, e in zip(numeros, espanol):
+            print(n, e)
+    
+    def bucleForZip_ConUnArgumento():
+        numero = [1, 2, 3, 4, 5]
+        zz = zip(numero)
+        print(list(zz))
+
+    #Resultado en Tuplas
 
 
-
-
+    def bucleForZip_ConDiccionario():
+        esp = {1 : "Uno", 2 : "Dos", 3 : "Tres"}
+        ing = {1 : "One", 2 : "Two", 3 : "Three"}
+        for e, i in zip(esp, ing):
+            print(e, i)
+    
+    
 
 
