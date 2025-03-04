@@ -71,6 +71,7 @@ switchObject.switchPythonCalculator2()
 #Aprendiendo a usar Switch
 switchObjectTwo = Switch1()
 switchObjectTwo.usa_switch(0,1)
+switchObjectTwo.usa_if()
 
 
 

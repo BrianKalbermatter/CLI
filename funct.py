@@ -2,7 +2,6 @@ from math import sqrt
 import time
 
 
-
 ###############
 class EscojaUnNumero:
     menssage = "Bienvenido a escoja su Numero"
