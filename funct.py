@@ -1,6 +1,6 @@
 from math import sqrt
 import time
-
+from collections.abc import Iterable 
 
 ###############
 class EscojaUnNumero:
@@ -617,10 +617,6 @@ def enumerateInPython(self):
     listaCuatro = ["A", "B", "C"]
     en =list(enumerate(listaCuatro))
     print(en)
-
-    
-    
-    
     
 ############################################
     
@@ -642,16 +638,14 @@ class TheListComprehensions:
         unos = [1 for i in range(5)]
         print(unos)
 
-    def eleva_Al_Dos(self ,i):
-        return i**2
-    
-    cuadrado = [eleva_Al_Dos(i); for i in range(5)]
+#    def eleva_Al_Dos(self ,i):
+#        return i**2   
+#    cuadrado = [eleva_Al_Dos(i); for i in range(5)]
     
     #Todos los numeros van a ser dividos por diez iterando con for en una lista
-    def listaDeNumeros(self, i):
-        lista = [42, 312,2,3,53,45]
-        
-        nuevaLista = [i/10; for i in lista]
+#    def listaDeNumeros(self, i):
+#        lista = [42, 312,2,3,53,45]    
+#        nuevaLista = [i/10; for i in lista]
 
     #Anadiendo Condicionales             
     #Control+J para abrir terminal
@@ -713,6 +707,29 @@ class bucleCorrectoProblema:
         for i in lista:
             print(i)
 
+#Iterables
+#Una clase iterable es una clase que puede ser iterada a la derecha de un for asi:
+#for elemento in [clase_iterable]:
+#Iterable significa que es capaz de iterar un objeto a la vez, osea uno debajo del otro
+
+libro = ['Pagina 1','Pagina 2','Pagina 3','Pagina 4']
+marcapagina = iter(libro)
+print(next(marcapagina))
+print(next(marcapagina))
+print(next(marcapagina))
+print(next(marcapagina))
+#StopIterection
+
+class MiClase:
+    def __init__(self, items):
+        self.lista = items
+    def __iter__(self):
+        return iter(self.lista)
+
+miObjeto = MiClase([5, 4, 3])
+for items in miObjeto:
+    print(items) 
+#Esto dara error si no colocamos el __iter__(): 
 
 
 
