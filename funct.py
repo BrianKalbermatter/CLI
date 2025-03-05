@@ -554,12 +554,165 @@ class ClassZip:
     #Resultado en Tuplas
 
 
-    def bucleForZip_ConDiccionario():
+    def bucleForZip_WithDictionaryOne():
         esp = {1 : "Uno", 2 : "Dos", 3 : "Tres"}
         ing = {1 : "One", 2 : "Two", 3 : "Three"}
         for e, i in zip(esp, ing):
             print(e, i)
     
+    def bucleForZip_WithDictionaryTwo():
+        esp = {1 : "Uno", 2 : "Dos", 3 : "Tres"}
+        eng = {1 : "One", 2 : "Two", 3 : "Three"}
+        #Con el items() podemos acceder al key y al value de un diccionario
+        for (k1, v1) , (k2, v2) in zip(esp.items(), eng.items()):
+            print(k1, v1, v2)   
     
+    #Deshacer un zip() en una sola linea de codigo
+    def listaABCDeshaciendoUnZip():
+        a = [1, 2, 3]
+        b = ["One","Two","Three"]
+        c = zip(a, b)
+        print(list(c))
+
+    #Se puede obtener A y B desde C asi:
+    def listaABCDeshaciendoUnZip_Dos():
+        c = [(1, 'One') ,(2, 'Two') ,(3, 'Three')]
+        a,b =zip(*c)
+        print(a)
+        print(b)
+    #Notese el uso de *c unpacking en Python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Para la proxima que quiera acceder a los indices de una coleccion, pensar que enumerete puede resolver mi problema mas clara
+
+def enumerateInPython(self):
+    listaUno = ["A", "B", "C"]
+    for i in listaUno:
+        print(i)
+
+    #Este for se utiliza por si no solo queremos el elemento i-esimo de la coleccion, sino que ademas queremos el indice 
+    listaDos = ["A", "B", "C"]
+    self.indice = 0
+    for a in listaDos:
+        print(self.indice ,a)
+        self.indice += 1
+    
+    #El verdadero enumerete 
+    listaTres = ["A", "B", "C"]
+    for indice, b in enumerate(listaTres):
+        print(indice, b)
+
+    listaCuatro = ["A", "B", "C"]
+    en =list(enumerate(listaCuatro))
+    print(en)
+
+    
+    
+    
+    
+############################################
+    
+#List Comprehensions me permite crear listas de elementos en una sola linea de codigo.
+class TheListComprehensions:
+    
+    def listComprehensionsOne():
+        cuadrados = [i ** 2 for i in range(5)]
+        print(cuadrados)
+    
+    def listComprehensionsTwo():
+        cuadrados = []
+        for i in range(5):
+            cuadrados.append(i**2)
+        print(i)
+    
+    #lista = [expresion for element in iterable]
+    def listExpresionForElementInIterable():
+        unos = [1 for i in range(5)]
+        print(unos)
+
+    def eleva_Al_Dos(self ,i):
+        return i**2
+    
+    cuadrado = [eleva_Al_Dos(i); for i in range(5)]
+    
+    #Todos los numeros van a ser dividos por diez iterando con for en una lista
+    def listaDeNumeros(self, i):
+        lista = [42, 312,2,3,53,45]
+        
+        nuevaLista = [i/10; for i in lista]
+
+    #Anadiendo Condicionales             
+    #Control+J para abrir terminal
+    #Expresion Generica
+    #lista = [expresion for elemento in iterable if condicion]
+
+    def condicionIfConvinadoConFor(self):
+        frase = "El perro no tiene rabo y esta roto del ruleman las dos ratas que tienen rotas las parras del parro"
+        erres = [i for i in frase if i== "r"]
+        print(erres)
+
+        #Se ejecuta una u la otra
+        print(len(erres))
+    print(condicionIfConvinadoConFor) 
+
+    def devolviendoUnSet():
+        frase = "El perro no tiene rabo y esta roto del ruleman las dos ratas que tienen rotas las parras del parro"
+        #Aca en un set lo unico que cambia es {}
+        my_set = {i for i in frase if i == 'r'}
+        print(my_set)
+
+        print(len(my_set))
+        
+    #Para un diccionario tengo que crear una variable para que se puedan llamar con el for por ejemplo:
+    def dictionaryComprehension():
+        lista1 = {'nombre', 'edad', 'region'}
+        
+        lista2 = {'Pelayo', 30, 'Australia'}
+
+        mi_dict = {i:j for i,j in zip(lista1, lista2)}
+        print(mi_dict)
+    #Funciones filter y map
+
+
+
+
+#Mal Uso de los Bucles para solucionar un problema con while o un for de la siguiente manera:
+class bucleWhileProblema:
+    def funcionBucleWhileProblema():
+        lista = [5,4,3,2,1]
+        i=0
+        while i < len(lista):
+            elementos = lista[i]
+            print(elementos)
+            i += 1
+
+class bucleForProblema:
+    def funcionBucleForProblema():
+        lista = [5,4,3,2,1]
+        i = 0
+        for i in range(len(lista)):
+            elementos = lista[i]
+            print(elementos)
+            
+#La forma mas corta y facil de hacer un recorrido de manera que te muestre todos los numeros es:
+class bucleCorrectoProblema:
+    def funcionAlProblemaCorrecto():
+        lista = [5,4,3,2,1]
+        for i in lista:
+            print(i)
+
+
 
 
