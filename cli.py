@@ -1,9 +1,39 @@
 import keyword
-
+import functools #Libreria estandar de Python
 from LearnLogicBasicPy.funct import Unpacking
 #Para colocar procesos por consola
 import subprocess
 import sys
+
+class DecorativeLearnCache:
+    #Una funcion externa
+    def cache_func(f):
+        """Decorador que cachea los resultados de las llamada de la funcion decorada"""
+        cache = {}
+        @functools.wraps(f)
+        #Una funcion inner() / Interna
+        def inner(*args, **kwargs):
+            clave_cache = (args, tuple(kwargs.items()))
+            if clave_cache in cache:
+                print(f"Retornando desde cache para{f.__name__}con argumentos{args}, {kwargs}")
+                return cache[clave_cache]
+            print(f"Llamada a la funcion{f.__name__}con argumentos{args}, {kwargs}")
+            result = f(*args,**kwargs)
+            cache[clave_cache] = result
+            return result
+        return inner
+    @cache_func
+    def calcular_Operacion_Costosa(number):
+        import time
+        time.sleep(2)
+        return number * number
+    
+    print(calcular_Operacion_Costosa(4))
+    print(calcular_Operacion_Costosa(5))
+
+
+
+
 class MiPrimeraClase:
     def __init__(self, num1, num2, num3):
         self.num1 = num1
