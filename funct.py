@@ -1,7 +1,9 @@
+#import win32com.client
 from math import sqrt
 import time
 from collections.abc import Iterable 
-
+from typing import List 
+import os
 ###############
 class EscojaUnNumero:
     menssage = "Bienvenido a escoja su Numero"
@@ -399,14 +401,22 @@ class SwitchInPython:
 
 
 
-
+#Class Simulando un Switch
 class Switch1:
     tabla_switch = {
         "0" : "000",
         "1" : "001",
+        "2" : "010",
+        "3" : "011",
+        "4" : "100",
+        "5" : "101",
+        "6" : "110",
+        "7" : "111",
         }
-    def usa_switch(self, decimal, tabla_switch):
-        return tabla_switch.get(decimal, "NA")
+    
+    def usa_switch(tabla_switch):
+        return tabla_switch.get("NA")
+    
     
     def usa_if(decimal):
         if decimal == '0':
@@ -429,27 +439,73 @@ class Switch1:
             return "NA"
     
     #A continuacion mediremos el "tiempo de ejecucion" de ambas para saber cual es mas rapida. Vamos a crear primero un "decorador" que nos permita medir el tiempo que una funcion tarda en ejecutarse.
+    
     def mide_tiempo(function):
         def funtion_medida(*args, **kwargs):
             inicio = time.time()
             c = function(*args, **kwargs)
-            print(f"Entrada: {args[1]}. Tiempo: {time.time() - inicio}")
-            return c
+            print(f"Entrada: {c}. Tiempo: {time.time() - inicio}")
         return funtion_medida
-    
     #Decoradores
-    @mide_tiempo
+    #@mide_tiempo
     
-    #Funcion para que se repita 1000000000 veces
-    def repite_funtion(function, entrada):
-        return [function(entrada) for i in range(10000000)]
     
-    #No solamente pueden ser llamadas como print o como tal la funcion tambien puedo llamarla con for asi:
-    for i in range(8):
-        repite_funtion(usa_if, str(i))
+    #Funcion para que se repita 10 veces
 
-    for i in range(8):
-        repite_funtion(usa_switch, str(i))
+    def repite_funtion(function, entrada):
+        return [function(entrada) for i in range(10)]
+    
+
+#SALIDA
+#No solamente pueden ser llamadas como print o como tal la funcion tambien puedo llamarla con for asi:
+#for i in range(8):
+#    Switch1.repite_funtion(usa_if, str(i))
+
+#for i in range(8):
+#    Switch1.repite_funtion(usa_switch, str(i))
+
+
+
+#Decorator
+#Un decorador no es nada mas que un wraper, se suelen pasar las funciones primero, dentro de la envoltura que se va a ejecutar el midle warp
+class Decorator():
+    def funtionDecorator(**kwargs):#Decorador que te devuelve un  diccionario pasandole values y keys.
+        print(kwargs)
+    funtionDecorator (ciudad = "Argentina", nombre = "Brian", keyword = "Keys") 
+
+    def text_funtions(*args, **kwargs):
+        print("args:", args)
+        print("kwargs:", kwargs)
+    text_funtions(1,2,3, name = "Brian", age=25)
+
+
+#################################################################
+#Los decoradores estan hechos de dos funciones, externa e interna:
+#@functools.wraps(func)
+#*args = Cualquier argumento posicional(Un argumento que escribimos directamente dentro de la funcion sin ponerle un nombre).
+
+#**kwargs = Cualquier argumento nombrado(tengo que poner cual es el nombre de un argumento por ejemplo nombre = 'nombre_argumento').
+
+#Funcion Externa: agregar_mensaje():
+def agregar_mensaje(f):
+    #Funcion Interna: Inner():
+    def inner(number):
+        print("Antes")
+        f(number)
+        print("Despues")
+    #A esto se le llama Kosher
+    return inner
+
+@agregar_mensaje
+#Decorator in Python Practise
+def obtener_total(number: List[int]) -> None: #-> None: es el return de la funcion
+    #Que hace la funcion sum()...
+    result = sum(number)
+    print(f"ESTE ES EL RESULTADO:{result}")
+
+obtener_total([n for n in range(1, 11)])
+
+
 
 
 
