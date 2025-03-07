@@ -1,5 +1,5 @@
 from funct import * 
-
+from cli import *
 #Condicion EscojaUnNumero
 escojaunnumero = EscojaUnNumero()
 
@@ -78,7 +78,7 @@ decoradorObject = Decorator()
 decoradorObject.funtionDecorator()
 decoradorObject.text_funtions()
 
-
+decarativeObject = DecorativeLearnCache()
 
 
 
