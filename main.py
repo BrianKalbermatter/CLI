@@ -2,7 +2,7 @@ from funct import *
 from cli import *
 #Condicion EscojaUnNumero
 escojaunnumero = EscojaUnNumero()
-
+from TypeStructs import *
 #Acceder a la variable directamente
 #escojaunnumero.funct1(EscojaUnNumero.menssage)
 #escojaunnumero.funct3()
