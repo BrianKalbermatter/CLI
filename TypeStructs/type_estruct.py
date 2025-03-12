@@ -63,6 +63,48 @@ print(cmath.polar(complex(5,5)))
 
 s = "Esto es una cadena y puedo colocarle tambien \" esto tambien"
 print(s)
+print("\110\110")
+
+#raw strings 
+print(r"\110\110")
+
+#Formateo de cadenas
+#La funcion str() convierte en string lo que se pasa como parametro.
+x = 5
+s = "El numero es: " + str(x)
+print(s)
+
+
+
+#Otra forma es usando %. Por un lado tenemos: 
+#%s
+#% = indica que se quiere imprimir.
+#s = tenemos a la variable a imprimir.
+
+#Para imprimir una cadena se usaria %s o %f para un valor en coma flotante.
+x = 10
+d = "El numero es: %d " %x
+print(d)
+
+e = "Los numeros son %d y %d" % (5, 10)
+print(e)
+
+z = "Los numeros son {} y {}".format(5,10)
+print(z)
+
+g = "Los numeros de {a} y {b}".format(a=5, b=10)
+print(g)
+
+def funtion():
+    return 20
+h = f"Este es mi numero:\nNumero ={funtion()}\nVeinte"
+print(h)
+
+
+
+
+
+
 
 
 

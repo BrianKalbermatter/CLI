@@ -997,5 +997,8 @@ for items in miObjeto:
     print(items) 
 #Esto dara error si no colocamos el __iter__(): 
 
+#Mi Primera Vez con Nvim y esta super cool!
+
+
 
 
