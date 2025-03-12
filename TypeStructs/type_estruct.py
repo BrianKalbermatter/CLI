@@ -61,6 +61,15 @@ import cmath
 print(cmath.phase(complex(5,0)))
 print(cmath.polar(complex(5,5)))
 
+s = "Esto es una cadena y puedo colocarle tambien \" esto tambien"
+print(s)
+
+
+
+
+
+
+
 
 
 
