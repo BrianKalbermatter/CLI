@@ -102,11 +102,39 @@ print(h)
 
 
 
+#Objetivo del dia = Mutabilidad del Libro de Python.
 
+def funtionTwo():
+    return 20
+num = 20
+result = funtionTwo() + num 
+i = f"{num} + {funtionTwo()} = {result}"
+print(i)
+#Aprender mas cosas de Nvim. Leer la documentacion: Conocer como se trabaja en NeoVim
 
+num2 = 20;num3 = 20
+result2 = num2 + num3
+print(result2)
 
+#Se puede verificar en un string si una palabra esta dentro de una concatenacion asi:
+print("mola" in "Python mola")
+print("hola ?"in"como estas?")
+#Para saber cuantos caracteres tiene una cadena de texto se utiliza la funcion len() asi:
+print(len("Hola como estas? espero que estes bastante bien. Sabias que me gusta Python y quiero hacer una aplicacion. Aun la estoy pensando que hacer pero mientras estoy aprendiendo mas sobre el lenguaje."))
+#Tambien puedo convertir los float y int en strings
+print("Esto es de los Strings")
+flotante_decimal = str(10.5)
+tipo = type(flotante_decimal)
+print(flotante_decimal)
+print(tipo)
 
-
+o = "abcdefg"
+print(o[0])
+print(o[4], o[6])
+print(len(o))
+print(o[0:6])
+print(o[0:2])
+print(o[0:])
 
 
 
