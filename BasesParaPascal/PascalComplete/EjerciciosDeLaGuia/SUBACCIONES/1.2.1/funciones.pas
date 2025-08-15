@@ -5,15 +5,15 @@ VAR
 resultado: INTEGER;
 x: INTEGER;
 
-FUNCTION convertir_numero(num: INTEGER) :INTEGER;
+FUNCTION convertir_numero_cuadrado(num: INTEGER) :INTEGER;
 BEGIN
-convertir_numero := num * num;
+    convertir_numero_cuadrado := num * num;
 END;
 
 BEGIN
 WRITE();
 READLN(x);
-resultado := convertir_numero(x);
+resultado := convertir_numero_cuadrado(x);
 WRITELN('El cuadrado es: ', resultado);
 END.
 
