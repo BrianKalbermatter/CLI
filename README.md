@@ -1,4 +1,1 @@
 @BrianKalbermatter 
-# ESTE ES MI NUEVO PROYECTO AUN ESTOY EN ELLO PERO TE LO DEJO CLARO:
-
-Compiladores en PASCAL!
